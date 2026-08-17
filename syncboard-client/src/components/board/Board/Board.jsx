@@ -16,10 +16,20 @@ function Board() {
 
   return (
     <div className="board-container">
-      <div className="board-header">
-        <BoardCounter />
-        <FilterBar />
-        <AddTaskForm />
+      <div className="board-toolbar">
+        <div className="board-toolbar__top">
+          <div className="board-toolbar__heading">
+            <h2 className="board-toolbar__title">Project Board</h2>
+            <p className="board-toolbar__subtitle">
+              Track tasks across To Do, In Progress, and Done
+            </p>
+          </div>
+          <BoardCounter />
+        </div>
+        <div className="board-toolbar__controls">
+          <FilterBar />
+          <AddTaskForm />
+        </div>
       </div>
 
       <div className="board">

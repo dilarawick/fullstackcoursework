@@ -1,17 +1,20 @@
 import { BrowserRouter } from 'react-router-dom'
 import { FilterProvider } from './context/FilterContext'
 import { TaskProvider } from './context/TaskContext'
+import { UserProvider } from './context/UserContext'
 import AppRoutes from './routes/AppRoutes'
 import './App.css'
 
 function App() {
   return (
     <BrowserRouter>
-      <TaskProvider>
-        <FilterProvider>
-          <AppRoutes />
-        </FilterProvider>
-      </TaskProvider>
+      <UserProvider>
+        <TaskProvider>
+          <FilterProvider>
+            <AppRoutes />
+          </FilterProvider>
+        </TaskProvider>
+      </UserProvider>
     </BrowserRouter>
   )
 }
