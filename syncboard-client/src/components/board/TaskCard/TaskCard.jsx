@@ -40,7 +40,7 @@ function TaskCard({ task }) {
         <span
           className={`task-card__due${overdue ? ' task-card__due--overdue' : ''}`}
         >
-          {overdue ? '⚠ ' : '📅 '}
+          {overdue ? 'Overdue:' : 'Due:'}
           {task.dueDate}
         </span>
       </div>

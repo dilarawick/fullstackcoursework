@@ -2,6 +2,7 @@ import { BrowserRouter } from 'react-router-dom'
 import { FilterProvider } from './context/FilterContext'
 import { TaskProvider } from './context/TaskContext'
 import { UserProvider } from './context/UserContext'
+import { ThemeProvider } from './context/ThemeContext'
 import AppRoutes from './routes/AppRoutes'
 import './App.css'
 
@@ -11,7 +12,9 @@ function App() {
       <UserProvider>
         <TaskProvider>
           <FilterProvider>
-            <AppRoutes />
+            <ThemeProvider>
+              <AppRoutes />
+            </ThemeProvider>
           </FilterProvider>
         </TaskProvider>
       </UserProvider>

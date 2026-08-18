@@ -1,5 +1,6 @@
 import { Link, NavLink, Outlet } from 'react-router-dom'
 import UserProfile from '../../ui/UserProfile/UserProfile'
+import ThemeToggle from '../../ui/ThemeToggle/ThemeToggle'
 
 function AppLayout() {
   return (
@@ -23,6 +24,9 @@ function AppLayout() {
         </div>
       </header>
       <main className="app-main">
+        <div className="theme-toggle-wrapper">
+          <ThemeToggle />
+        </div>
         <Outlet />
       </main>
     </div>
